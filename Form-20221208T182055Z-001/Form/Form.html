@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+           select{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 100%;
+            }
+            .inner{
+                width: 18%;
+            }
+            .floatRight{
+                background: url('../HTML/lab-test.jpg') no-repeat right top ;
+                background-position: 0 - -15px;
+                background-size: 45% 100%;
+                background-attachment:fixed;
+                padding: 1% 0% 2% 2%;
+                float: left;
+                width: 80%;
+                overflow-y: auto;
+                height: 75%;
+                position: fixed;
+                border-style: groove;
+                margin: 3% 10% 0% 10%;
+            }
+            input{
+                padding: 2%;
+                font-size: large;
+                border-bottom: 1px solid grey;
+                border-top: 0px;
+                border-right: 0px;
+                border-left: 0px;  
+                font-family: Georgia, 'Times New Roman', Times, serif;
+               
+            }
+            label{
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            button{
+                margin: 20px;
+                width: 80px;
+                border-radius: 4px;
+                height: 30px;
+                color: white;
+                font-size: 18px;
+                border: none;
+                background-color: rgb(175, 102, 243);
+            }
+            .foot{
+                position: absolute;
+                bottom: 0%;
+                margin-left: 40%;
+                margin-top: 20%;
+            }
+        </style>
+    </head>
+    <body>
+       
+        <div class="floatRight">
+        
+                <form action = "" id = "lab-form">
+                
+                
+                <h2>1. Your Contact Details</h2>
+                    <input type = "text" title = "Full Name" placeholder="Full Name" class = "inner" required>
+                    <input type = "text" title = "Patient id" placeholder="Patient Id if exists" class = "inner" required><br><br>
+                    <input type = "number" title = "Contact Number" placeholder="Contact Number" class = "inner" min="6000000000" max="9999999999" placeholder="Contact Number" required>
+                    <input type = "email" title = "Email id" placeholder="Email id" class = "inner" required><br><br><br>
+
+                
+                <h2>2. Address</h2>
+                    <input type = "text" title = "Hno" placeholder="H-No" class = "inner" required>
+                       <input type = "text" title = "Street" placeholder="Street" class = "inner" required><br><br>
+                    <input type = "text" title = "Area" placeholder="Area" class = "inner" required><br><br>
+                     
+                
+                <h3>District</h3>          
+                <select name ="district" class = "">
+                    <option disabled selected>Choose</option>
+                    <option value = "Bangalore">Bangalore</option>
+                    <option value = "Pune">Pune</option>
+                    <option value = "Indore">Indore</option>
+                    <option value = "Hyderabad">Hyderabad</option>
+                </select><br><br><br>
+                
+                
+                <h2>3. Test Type</h2>
+                <input type = "checkbox" id = "CBC" name = "CBC" value = "CBC">
+                <label for = "CBC">CBC</label><br><br>
+                <input type = "checkbox" id = "completeurine" name = "completeurine" value = "completeurine">
+                <label for = "completeurine">Complete Urine</label><br><br>
+                <input type = "checkbox" id = "lipidprofile" name = "lipidprofile" value = "lipidprofile">
+                <label for = "lipidprofile">Lipid Profile</label><br><br>
+                <input type = "checkbox" id = "tsh" name = "tsh" value = "tsh">
+                <label for = "tsh">Thyroid Stimulating Hormone(TSH)</label><br><br>
+                <input type = "checkbox" id = "glucosetest" name = "glucosetest" value = "glucosetest">
+                <label for = "glucosetest">Glucose Test</label><br><br><br>
+
+
+                <h2>4. Do you want the hard copy of the report also?</h2>
+                <input type = "radio" id = "yes" name = "copy" value = "yes">
+                <label for = "yes" class = "inner1" style="line-height: 50px;">Yes</label>
+                <input type = "radio" id = "no" name = "copy" value = "no">
+                <label for = "no">No</label><br><br><br>
+
+                
+                <h2>5. Date and Time</h2>
+                <label for = "date">Date: </label>
+                <input type = "date" id = "date" name = "date" required><br><br>
+                <label for = "time">Time: </label>
+                <input type = "time" id = "time" name = "time" required><br><br><br>
+                
+            </form>
+        </div>
+        <div class = "foot">
+            <button form = "lab-form" >Reset</button>
+            <button form = "lab-form">Submit</button>                    
+    </div>
+    
+    </body>
+</html>
